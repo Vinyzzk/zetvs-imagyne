@@ -7,6 +7,7 @@ import re
 import shutil
 import time
 from apscheduler.schedulers.background import BackgroundScheduler
+from dotenv import load_dotenv
 
 
 app = Flask(__name__)
@@ -125,5 +126,5 @@ def baixar_imagens():
 
 if __name__ == '__main__':
     schedule_cleaning()
-    port = int(os.environ.get("PORT", 5000))  # Railway define a variável de ambiente PORT
-    app.run(host="0.0.0.0", port=port, debug=True)
+    #port = int(os.environ.get("PORT", 5000))  # Railway define a variável de ambiente PORT
+    app.run(host="0.0.0.0", port=5000, debug=True)
